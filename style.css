@@ -90,6 +90,12 @@ p{
     font-weight: bolder;
 }
 
+@media screen and (max-width: 768px){
+    .main{
+        height: 90vh;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .container{
         align-items: normal;
