@@ -73,15 +73,44 @@ p{
     align-items: center;
     font-size: 3rem;
     cursor: pointer;
+    border: 1.5px solid darkblue;
     border-radius: 1rem;
+    transform-style: preserve-3d; /* Preserve 3D transformation */
+    transition: transform 0.5s;
 }
 
 .revealed{
     background-color: greenyellow;
     color: #000;
+    transform: rotateY(180deg); /* Rotate the card */
 }
 
 #attempts{
     font-size: 1.7rem;
     font-weight: bolder;
 }
+
+@media screen and (max-width: 425px) {
+    .container{
+        align-items: normal;
+        margin: 0;
+        padding: 0;
+    }
+
+   .main{
+    padding: 1rem;
+   }
+
+   .grid{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 20px 0;
+   }
+   
+   .card{
+    height: 5rem;
+    width: 5rem;
+   }
+}
+
+
